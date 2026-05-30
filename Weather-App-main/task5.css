@@ -1,0 +1,114 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0a3cff, #00c6ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= CONTAINER ================= */
+.weather-container {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 1.2s ease;
+}
+
+/* ================= TITLE ================= */
+.weather-container h1 {
+    color: #0a3cff;
+    margin-bottom: 15px;
+    animation: fadeDown 1.2s ease;
+}
+
+/* ================= INPUT ================= */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input focus animation */
+input:focus {
+    border-color: #0a3cff;
+    box-shadow: 0 0 6px rgba(10, 60, 255, 0.5);
+}
+
+/* ================= BUTTON ================= */
+button {
+    margin-top: 10px;
+    padding: 10px 25px;
+    border: none;
+    background: #0a3cff;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #0033cc;
+    transform: scale(1.1);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= WEATHER RESULT ================= */
+.weather-result {
+    margin-top: 20px;
+    animation: fadeUp 1.4s ease;
+}
+
+.weather-result p {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: 0.3s;
+}
+
+/* Hover on weather text */
+.weather-result p:hover {
+    color: #0a3cff;
+    transform: translateX(5px);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
